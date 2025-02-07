@@ -51,7 +51,7 @@ export function CoffeeRatingForm() {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values)
-    // Insert the data into the coffee_ratings table in Supabase
+    
     const { data, error } = await supabase
       .from('coffee_ratings')
       .insert([values])
